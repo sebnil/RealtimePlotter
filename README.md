@@ -22,13 +22,14 @@ More info and other projects at http://sebastiannilsson.com/en/projekt/realtime-
 ### How to install and use
 Since I have an Arduino I will use it as example but any micro processor can be used.
 
-1. Get ProcessingIDE to run the code. It is a neat and useful IDE for doing graphical stuff.
-2. Connect the Arduino to the usb or serial port of your computer.
-3. Upload the example code (RealtimePlotterArduinoCode) to the Arduino
-4. Check serial monitor (at 115200) and check that it outputs data in the format "value1 value2 value3 value4 value5 value6".
-5. Close the serial monitor (since only one resource can use the serial port at the same time).
-6. Open the Processing sketch and edit the serial port name to correspond to the actual port ("COM3", "COM5", "/dev/tty.usbmodem1411" or whatever you have)
-7. Run the sketch
+1. Get [ProcessingIDE](http://processing.org/) to run the code. It is a neat and useful IDE for doing graphical stuff.
+2. Download [controlP5 gui library](http://www.sojamo.de/libraries/controlP5/) and unzip it into your Processing libraries folder
+3. Connect the Arduino to the usb or serial port of your computer.
+4. Upload the example code (RealtimePlotterArduinoCode) to the Arduino
+5. Check serial monitor (at 115200) and check that it outputs data in the format "value1 value2 value3 value4 value5 value6".
+6. Close the serial monitor (since only one resource can use the serial port at the same time).
+7. Open the Processing sketch and edit the serial port name to correspond to the actual port ("COM3", "COM5", "/dev/tty.usbmodem1411" or whatever you have)
+8. Run the sketch
 
 
 ### Advanced use
