@@ -1,7 +1,7 @@
 // import libraries
 import java.awt.Frame;
 import java.awt.BorderLayout;
-import controlP5.*;
+import controlP5.*; // http://www.sojamo.de/libraries/controlP5/
 import processing.serial.*;
 
 /* SETTINGS BEGIN */
