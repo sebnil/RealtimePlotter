@@ -36,14 +36,14 @@ public class ControlFrame extends PApplet {
     int x;
     int y;
     cp5.addTextlabel("label").setText("Speed PID (outer loop)").setPosition(x=5, y=5).setFont(createFont("Georgia", 12));
-    cp5.addTextfield("speedPIDKp").setPosition(x=x+5, y=y+20).setText(getConfigString("speedPIDKp")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedPIDKi").setPosition(x, y=y+40).setText(getConfigString("speedPIDKi")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedPIDKd").setPosition(x, y=y+40).setText(getConfigString("speedPIDKd")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedPIDOutputLowerLimit").setPosition(x, y=y+60).setText(getConfigString("speedPIDOutputLowerLimit")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedPIDOutputHigherLimit").setPosition(x, y=y+40).setText(getConfigString("speedPIDOutputHigherLimit")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedPIDSampling").setPosition(x, y=y+40).setText(getConfigString("speedPIDSampling")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("motorSpeedSensorSampling").setPosition(x, y=y+40).setText(getConfigString("motorSpeedSensorSampling")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("speedKalmanFilterR").setPosition(x, y=y+40).setText(getConfigString("speedKalmanFilterR")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Kp").setPosition(x=x+5, y=y+20).setText(getConfigString("speedPIDKp")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Ki").setPosition(x, y=y+40).setText(getConfigString("speedPIDKi")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Kd").setPosition(x, y=y+40).setText(getConfigString("speedPIDKd")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Output LowerLimit").setPosition(x, y=y+60).setText(getConfigString("speedPIDOutputLowerLimit")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Output HigherLimit").setPosition(x, y=y+40).setText(getConfigString("speedPIDOutputHigherLimit")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed-PID Sampling").setPosition(x, y=y+40).setText(getConfigString("speedPIDSampling")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("motor Speed SensorSampling").setPosition(x, y=y+40).setText(getConfigString("motorSpeedSensorSampling")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("speed Kalman FilterR").setPosition(x, y=y+40).setText(getConfigString("speedKalmanFilterR")).setWidth(40).setAutoClear(false);
 
     // angple PID
     x = x+150;
@@ -56,39 +56,39 @@ public class ControlFrame extends PApplet {
     cp5.addTextlabel("Aggressive").setText("Aggressive").setPosition(x, y).setFont(createFont("Georgia", 12));
     x = x - 95;
     y = y+20;
-    cp5.addTextfield("anglePIDConKp").setPosition(x, y).setText(getConfigString("anglePIDConKp")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID ConKp").setPosition(x, y).setText(getConfigString("anglePIDConKp")).setWidth(40).setAutoClear(false);
     x = x + 100;
-    cp5.addTextfield("anglePIDAggKp").setPosition(x, y).setText(getConfigString("anglePIDAggKp")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID AggKp").setPosition(x, y).setText(getConfigString("anglePIDAggKp")).setWidth(40).setAutoClear(false);
     x = x - 100;
     y = y+40;
-    cp5.addTextfield("anglePIDConKi").setPosition(x, y).setText(getConfigString("anglePIDConKi")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID ConKi").setPosition(x, y).setText(getConfigString("anglePIDConKi")).setWidth(40).setAutoClear(false);
     x = x + 100;
     cp5.addTextfield("anglePIDAggKi").setPosition(x, y).setText(getConfigString("anglePIDAggKi")).setWidth(40).setAutoClear(false);
     x = x - 100;
     y = y+40;
-    cp5.addTextfield("anglePIDConKd").setPosition(x, y).setText(getConfigString("anglePIDConKd")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID ConKd").setPosition(x, y).setText(getConfigString("anglePIDConKd")).setWidth(40).setAutoClear(false);
     x = x + 100;
-    cp5.addTextfield("anglePIDAggKd").setPosition(x, y).setText(getConfigString("anglePIDAggKd")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID AggKd").setPosition(x, y).setText(getConfigString("anglePIDAggKd")).setWidth(40).setAutoClear(false);
 
     // angle general      
-    cp5.addTextfield("anglePIDLowerLimit").setPosition(x=x-100, y=y+60).setText(getConfigString("anglePIDLowerLimit")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("calibratedZeroAngle").setPosition(x, y=y+40).setText(getConfigString("calibratedZeroAngle")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("anglePIDSampling").setPosition(x, y=y+40).setText(getConfigString("anglePIDSampling")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("angleSensorSampling").setPosition(x, y=y+40).setText(getConfigString("angleSensorSampling")).setWidth(40).setAutoClear(false);
-    cp5.addTextfield("angleKalmanFilterR").setPosition(x, y=y+40).setText(getConfigString("angleKalmanFilterR")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID LowerLimit").setPosition(x=x-100, y=y+60).setText(getConfigString("anglePIDLowerLimit")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("calibrated Zero Angle").setPosition(x, y=y+40).setText(getConfigString("calibratedZeroAngle")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle-PID Sampling").setPosition(x, y=y+40).setText(getConfigString("anglePIDSampling")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle Sensor Sampling").setPosition(x, y=y+40).setText(getConfigString("angleSensorSampling")).setWidth(40).setAutoClear(false);
+    cp5.addTextfield("angle Kalman FilterR").setPosition(x, y=y+40).setText(getConfigString("angleKalmanFilterR")).setWidth(40).setAutoClear(false);
 
     // Debug
     cp5.addTextlabel("Debug").setText("Debug").setPosition(x=x+200, y=5).setFont(createFont("Georgia", 12));
-    cp5.addToggle("debugLevel").setPosition(x, y=y+40).setValue(int(getConfigString("debugLevel"))).setMode(ControlP5.SWITCH);
-    cp5.addTextfield("debugSampleRate").setPosition(x, y=y+40).setText(getConfigString("debugSampleRate")).setWidth(40).setAutoClear(false);
-    cp5.addToggle("speedPIDOutputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedPIDOutputDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("speedPIDInputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedPIDInputDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("speedKalmanFilterDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedKalmanFilterDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("anglePIDSetpointDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDSetpointDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("anglePIDInputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDInputDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("anglePIDOutputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDOutputDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("speedRawDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedRawDebug"))).setMode(ControlP5.SWITCH);
-    cp5.addToggle("angleRawDebug").setPosition(x, y=y+40).setValue(int(getConfigString("angleRawDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("debug Level").setPosition(x, y=y+40).setValue(int(getConfigString("debugLevel"))).setMode(ControlP5.SWITCH);
+    cp5.addTextfield("debug Sample Rate").setPosition(x, y=y+40).setText(getConfigString("debugSampleRate")).setWidth(40).setAutoClear(false);
+    cp5.addToggle("speed-PID OutputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedPIDOutputDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("speed-PID InputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedPIDInputDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("speed Kalman FilterDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedKalmanFilterDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("angle-PID SetpointDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDSetpointDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("angle-PID InputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDInputDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("angle-PID OutputDebug").setPosition(x, y=y+40).setValue(int(getConfigString("anglePIDOutputDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("speed RawDebug").setPosition(x, y=y+40).setValue(int(getConfigString("speedRawDebug"))).setMode(ControlP5.SWITCH);
+    cp5.addToggle("angle RawDebug").setPosition(x, y=y+40).setValue(int(getConfigString("angleRawDebug"))).setMode(ControlP5.SWITCH);
 
     PImage[] imgs = {
       loadImage(topSketchPath+"/images/button_a.png"), loadImage(topSketchPath+"/images/button_b.png"), loadImage(topSketchPath+"/images/button_c.png")
