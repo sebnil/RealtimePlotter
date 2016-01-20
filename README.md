@@ -26,7 +26,7 @@ Since I have an Arduino I will use it as example but any micro processor can be 
 2. Download [controlP5 gui library](http://www.sojamo.de/libraries/controlP5/) and unzip it into your Processing libraries folder
 3. Connect the Arduino to the usb or serial port of your computer.
 4. Upload the example code (RealtimePlotterArduinoCode) to the Arduino
-5. Check serial monitor (at 115200) and check that it outputs data in the format "value1 value2 value3 value4 value5 value6".
+5. Check serial monitor (at 115200) and check that it outputs data in the format "value1 value2 value3 value4 value5 value6\r". Always end with a line break. Another way to do formatting is with the printf function like so: printf("%u %u %u %u %u %u\r", data1, data2,...); 
 6. Close the serial monitor (since only one resource can use the serial port at the same time).
 7. Open the Processing sketch and edit the serial port name to correspond to the actual port ("COM3", "COM5", "/dev/tty.usbmodem1411" or whatever you have)
 8. Run the sketch
