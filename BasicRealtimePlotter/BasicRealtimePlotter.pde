@@ -46,7 +46,7 @@ void setup() {
   graphColors[5] = color(200, 46, 232);
 
   // settings save file
-  topSketchPath = sketchPath;
+  topSketchPath = sketchPath();
   plotterConfigJSON = loadJSONObject(topSketchPath+"/plotter_config.json");
 
   // gui
