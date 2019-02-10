@@ -5,7 +5,10 @@ Debugging sensors on a microprocessor can be a hassle and the most used approach
 ![Realtime plotter](http://sebastiannilsson.com/wp-content/uploads/2013/12/RealtimePlotterProcessing-300x216.png)
 
 I created this software to debug an Arduino Due on my self-balancing robot. To tune the controls of the robot I needed fast feedback to know if I was making progress or not. The video below demonstrates typical use of the realtime plotter:
-[http://www.youtube.com/watch?v=WN2oXuavrWk](http://www.youtube.com/watch?v=WN2oXuavrWk)
+## Video
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=WN2oXuavrWk
+" target="_blank"><img src="http://img.youtube.com/vi/WN2oXuavrWk/0.jpg" 
+alt="Realtime plotter video" width="240" height="180" border="10" /></a>
 
 - Real-time plotter of your data while it is still being processed by your application
 - Plots live data from serial port. Microprocessor choice does not matter as long as it can send serial data to your computer.
@@ -44,3 +47,9 @@ In some sense the realtime data plotter can also be used as a very slow and limi
 
 ### Some comments about earlier approaches and the used libraries
 I have tried many different ways of doing this. My first approach was Matlab but I had problems with it locking the serial port. It was a hassle to get it working and getting everything configured takes to much time. My second approach was Python and graphing libraries but this was still not very satisfactory. The Processing language together with a graph library and ControlP5 made the whole thing much easier.
+
+
+## Support my creation of open source software:
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sebnil&url=https://github.com/sebnil/RealtimePlotter)
+
+<a href='https://ko-fi.com/A0A2HYRH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
