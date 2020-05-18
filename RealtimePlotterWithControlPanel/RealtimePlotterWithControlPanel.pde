@@ -10,7 +10,7 @@ import processing.serial.*;
 String serialPortName = "/dev/tty.usbmodem1411";
 
 // If you want to debug the plotter without using a real serial port set this to true
-boolean mockupSerial = false;
+boolean mockupSerial = true;
 
 /* SETTINGS END */
 
@@ -34,9 +34,12 @@ color[] graphColors = new color[6];
 // helper for saving the executing path
 String topSketchPath = "";
 
+void settings() {
+    size(890, 620, P2D);
+}
+
 void setup() {
-  frame.setTitle("Realtime plotter");
-  size(890, 620);
+  surface.setTitle("Realtime plotter");
 
   // set line graph colors
   graphColors[0] = color(131, 255, 20);
@@ -54,7 +57,7 @@ void setup() {
   cp5 = new ControlP5(this);
   
   // extra control panel frame
-  cf = addControlFrame("Robot Tuner", 500, 650);
+  cf = new ControlFrame(this, 500, 650, "Robot Tuner");
   
   // init charts
   setChartSettings();

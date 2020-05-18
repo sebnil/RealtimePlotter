@@ -1,20 +1,6 @@
 // Settings for the control panel are saved in this file
 JSONObject robotConfigJSON;
 
-
-ControlFrame addControlFrame(String theName, int theWidth, int theHeight) {
-  Frame f = new Frame(theName);
-  ControlFrame p = new ControlFrame(this, theWidth, theHeight);
-  f.add(p);
-  p.init();
-  f.setTitle(theName);
-  f.setSize(p.w, p.h);
-  f.setLocation(100, 100);
-  f.setResizable(false);
-  f.setVisible(true);
-  return p;
-}
-
 // the ControlFrame class extends PApplet, so we 
 // are creating a new processing applet inside a
 // new frame with a controlP5 object loaded
@@ -24,8 +10,15 @@ public class ControlFrame extends PApplet {
 
   int abc = 100;
 
-  public void setup() {
+  public void settings() {
     size(w, h);
+    
+  }
+
+  public void setup() {
+    surface.setLocation(100, 100);
+    surface.setResizable(false);
+    surface.setVisible(true);
     frameRate(25);
     cp5 = new ControlP5(this);
 
@@ -101,7 +94,7 @@ public class ControlFrame extends PApplet {
     cp5.addButton("turnRight").setValue(1).setPosition(x=x+120, y).setImages(imgs).updateSize();
     
     cp5.addButton("start").setValue(1).setPosition(x=x-250, y=y-60);
-    cp5.addButton("stop").setValue(1).setPosition(x, y=y+40);
+    cp5.addButton("stop1").setValue(1).setPosition(x, y=y+40); // Do not run when setting  "stop"
     cp5.addButton("calibrate").setValue(1).setPosition(x, y=y+40);
   }
 
@@ -137,10 +130,11 @@ public class ControlFrame extends PApplet {
   private ControlFrame() {
   }
 
-  public ControlFrame(Object theParent, int theWidth, int theHeight) {
+  public ControlFrame(PApplet theParent, int theWidth, int theHeight, String _name) {
     parent = theParent;
     w = theWidth;
     h = theHeight;
+    PApplet.runSketch(new String[]{this.getClass().getName()}, this);
   }
 
 
@@ -151,7 +145,7 @@ public class ControlFrame extends PApplet {
 
   ControlP5 cp5;
 
-  Object parent;
+  PApplet parent;
 }
 String getConfigString(String id) {
   String r = "";
@@ -163,4 +157,3 @@ String getConfigString(String id) {
   }
   return r;
 }
-
