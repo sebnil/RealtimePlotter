@@ -26,13 +26,15 @@ More info and other projects at http://sebastiannilsson.com/en/projekt/realtime-
 Since I have an Arduino I will use it as example but any micro processor can be used.
 
 1. Get [ProcessingIDE](http://processing.org/) to run the code. It is a neat and useful IDE for doing graphical stuff.
-2. Download [controlP5 gui library](http://www.sojamo.de/libraries/controlP5/) and unzip it into your Processing libraries folder
 3. Connect the Arduino to the usb or serial port of your computer.
 4. Upload the example code (RealtimePlotterArduinoCode) to the Arduino
 5. Check serial monitor (at 115200) and check that it outputs data in the format "value1 value2 value3 value4 value5 value6\r". Always end with a line break. Another way to do formatting is with the printf function like so: printf("%u %u %u %u %u %u\r", data1, data2,...); 
 6. Close the serial monitor (since only one resource can use the serial port at the same time).
-7. Open the Processing sketch and edit the serial port name to correspond to the actual port ("COM3", "COM5", "/dev/tty.usbmodem1411" or whatever you have)
-8. Run the sketch
+7. Open the Processing sketch (Either BasicRealtimePlotter/BasicRealtimePlotter.pde or RealtimePlotterWithControlPanel/RealtimePlotterWithControlPanel.pde)
+8. In the Processing IDE, go to Sketch->Import Library. Search for ControlP5 from Andreas Schlegel and Install it. (I used version 2.2.6). You can also manually download [controlP5 gui library](http://www.sojamo.de/libraries/controlP5/) and unzip it into your Processing libraries folder
+
+9. Edit the sketch file so that the serial port name to correspond to the actual port ("COM3", "COM5", "/dev/tty.usbmodem1411" or whatever you have). (If you want to test the code without a serial port just set boolean mockupSerial = true;)
+10. Run the sketch
 
 
 ### Advanced use
@@ -41,15 +43,19 @@ The realtime plotter can be expanded to also send commands to the microprocessor
 ![RealtimePlotterProcessingWithControlPanel](http://sebastiannilsson.com/wp-content/uploads/2013/12/RealtimePlotterProcessingWithControlPanel-300x140.png)
 
 ### Notes
-I decided to send and receive the data as ascii characters instead of binaries. The greatest disadvantage is performance and ease of use is the main advantage.
+I decided to send and receive the data as ascii characters instead of binaries. The greatest disadvantage is performance. The greatest advantage is ease of use.
 
 In some sense the realtime data plotter can also be used as a very slow and limited digital oscilloscope. I would not recommend using it for any high frequency applications though.
+
+### Processing 2/3 compatability
+- For Processing 3 compatability, use the most recent code.
+- For Processing 2 compatability, use the code from the Processing-2 branch or [download the older release](https://github.com/sebnil/RealtimePlotter/releases/tag/1.0).
 
 ### Some comments about earlier approaches and the used libraries
 I have tried many different ways of doing this. My first approach was Matlab but I had problems with it locking the serial port. It was a hassle to get it working and getting everything configured takes to much time. My second approach was Python and graphing libraries but this was still not very satisfactory. The Processing language together with a graph library and ControlP5 made the whole thing much easier.
 
 
-## Support my creation of open source software:
+## Support me creating open source software:
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=sebnil&url=https://github.com/sebnil/RealtimePlotter)
 
 <a href='https://ko-fi.com/A0A2HYRH' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
