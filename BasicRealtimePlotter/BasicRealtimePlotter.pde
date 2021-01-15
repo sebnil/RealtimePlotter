@@ -34,7 +34,7 @@ color[] graphColors = new color[6];
 String topSketchPath = "";
 
 void setup() {
-  frame.setTitle("Realtime plotter");
+  surface.setTitle("Realtime plotter");
   size(890, 620);
 
   // set line graph colors
